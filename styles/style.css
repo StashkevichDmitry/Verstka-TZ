@@ -142,7 +142,7 @@ input:focus {
 	height: 79px;
 }
 .prev-content-1{
-float: left;
+	float: left;
 	margin: 0 20px 0 25px;
 }
 .prev-content-1:hover, .next-content-1:hover{
@@ -199,37 +199,56 @@ float: left;
 	width:100%;
 	background: #FFFFFF;
 }
-
-.slideshow-container{
+ 
+.slideshow-container {
+	position: relative;
 	max-width: 960px;
 	margin: 0 auto;
 	display: flex;
 }
+.mySlides {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 10px 20px;
+}
 .prev, .next{
+	display: flex;
+	align-items: center;
+	height: 100%;
 	cursor: pointer;
 	color: #2e3f51;
 	font-weight: bold;
-	font-size: 1100%;
-	height: 100%;
+	font-size: 54px;
 	transition: 0.6s ease;
 	user-select: none;
 	overflow: hidden;
 	white-space: nowrap;
 }
-.prev{
-	left: 0;
-	margin: -16px 60px 0 30px;
+.next i, .prev i {
+	font-size: 32px;
 }
-.next{
+.prev_arrow {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+.next_arrow {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	right: 0;
-	/*border-radius: 3px 0 0 3px;*/
-	margin: -16px 30px 0 60px;
 }
 .prev:hover, .next:hover{
 	font-style: normal;
 	color: #0e84b5;
 }
-.text{
+.text {
 	display: flex;
 	max-width: 740px;
 	color: #212d3a;
@@ -525,14 +544,16 @@ float: left;
 }
 @media only screen and (max-width: 860px){
 .prev, .next{
+	position: absolute;
 	cursor: pointer;
 	color: #2e3f51;
 	font-weight: bold;
-	font-size: 900%;
+	font-size: 500%;
 	height: 100%;
 	transition: 0.6s ease;
 	overflow: hidden;
 	white-space: nowrap;
+	padding: 0 10px;
 }
 .prev{
 	left: 0;
@@ -546,21 +567,21 @@ float: left;
 .text1{
 	font-size: 10px;
 }
-}
-@media only screen and (max-width: 620px){
-.prev, .next{
-	font-size: 400%;
-}
-.text{
-	font-size: 18px; 
+.text {
+		text-align: center;
+    padding: 10px 26px;
+    font-size: 18px;
 }
 }
-@media only screen and (max-width: 540px){
-.text{
-	font-size: 13px; 
-	line-height: 1,2;
-}
-.text1{
-	font-size: 9px;
-}
+
+@media (max-width:400px){ 
+	.prev, .next{
+		position: absolute;
+		font-size: 400%;
+	}
+	.text{
+		text-align: center;
+	    padding: 10px 20px; 
+	    font-size: 14px
+	}
 }
